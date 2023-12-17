@@ -1,12 +1,13 @@
 import { Injectable } from '@nestjs/common';
-import { Request } from 'express';
+import { CreateUserDto } from './dto/userCreate.dto';
+import { LoginUserDto } from './dto/userLogin.dto';
 
 @Injectable()
 export class AuthService {
-  greetingS(req: Request) {
-    return req.body;
+  register(UserDto: CreateUserDto) {
+    return { body: UserDto };
   }
-  login(body: any) {
-    return body;
+  login(UserDto: LoginUserDto) {
+    return { body: UserDto };
   }
 }
