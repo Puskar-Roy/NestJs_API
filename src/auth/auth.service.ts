@@ -12,9 +12,12 @@ export class AuthService {
     private userRepo: Repository<User>,
   ) {}
   register(UserDto: CreateUserDto) {
-    return { body: UserDto };
+    return this.userRepo.save(UserDto);
   }
   login(UserDto: LoginUserDto) {
     return { body: UserDto };
+  }
+  getAllUsers(): Promise<User[]> {
+    return this.userRepo.find();
   }
 }
