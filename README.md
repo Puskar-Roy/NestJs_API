@@ -3,10 +3,10 @@
 <br />
 <div align="center">
   <a href="https://github.com/BoBsRepository/create-express-ts-template">
-    <img src="https://repository-images.githubusercontent.com/162537377/9c807700-9828-11ea-8a3b-47411956130e" alt="Logo" width="200" height="100">
+    <img src="https://miro.medium.com/v2/resize:fit:1400/1*-hmwuf8jE2c7fPdMzX9_0w.jpeg" alt="Logo" width="200" height="100">
   </a>
 
-  <h3 align="center">Express Js with Typescript</h3>
+  <h3 align="center">NEST Js + Type ORM + Postgre SQL +Json Web Tokens</h3>
 
   <p align="center">
     An awesome template to jumpstart your Express.js (TypeScript) projects, helping you to speed up the process of building RESTful APIs.
