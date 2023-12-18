@@ -11,14 +11,14 @@
   <p align="center">
     An awesome template to jumpstart your Express.js (TypeScript) projects, helping you to speed up the process of building RESTful APIs.
     <br />
-    <a href="https://github.com/BoBsRepository/create-express-ts-template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Puskar-Roy/NestJs_API.git"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://create-expresss-ts.vercel.app">View Demo</a>
     ·
-    <a href="https://github.com/BoBsRepository/create-express-ts-template/issues">Report Bug</a>
+    <a href="https://github.com/Puskar-Roy/NestJs_API.git/issues">Report Bug</a>
     ·
-    <a href="https://github.com/BoBsRepository/create-express-ts-template/issues">Request Feature</a>
+    <a href="https://github.com/Puskar-Roy/NestJs_API.git/issues">Request Feature</a>
   </p>
 </div>
 
