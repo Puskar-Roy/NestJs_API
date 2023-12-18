@@ -2,7 +2,7 @@
 
 <br />
 <div align="center">
-  <a href="https://github.com/BoBsRepository/create-express-ts-template">
+  <a href="https://github.com/Puskar-Roy/NestJs_API.git">
     <img src="https://miro.medium.com/v2/resize:fit:1400/1*-hmwuf8jE2c7fPdMzX9_0w.jpeg" alt="Logo" width="200" height="100">
   </a>
 
