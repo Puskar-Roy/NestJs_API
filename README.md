@@ -9,16 +9,13 @@
   <h3 align="center">NEST Js + Type ORM + Postgre SQL +Json Web Tokens</h3>
 
   <p align="center">
-    An awesome template to jumpstart your Express.js (TypeScript) projects, helping you to speed up the process of building RESTful APIs.
-    <br />
-    <a href="https://github.com/Puskar-Roy/NestJs_API.git"><strong>Explore the docs »</strong></a>
+    This REST API features CRUD routes for users, along with registration, login functionalities, and route protection. 🚀🔐
     <br />
     <br />
-    <a href="https://create-expresss-ts.vercel.app">View Demo</a>
+    <br />
+    <a href="https://github.com/Puskar-Roy/NestJs_API/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Puskar-Roy/NestJs_API.git/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/Puskar-Roy/NestJs_API.git/issues">Request Feature</a>
+    <a href="https://github.com/Puskar-Roy/NestJs_API/issues">Request Feature</a>
   </p>
 </div>
 
@@ -35,27 +32,13 @@ Before you begin contributing to this project, make sure you have the following 
 
 1. **Clone the Repository:**
    ```bash
-   git clone https://github.com/BoBsRepository/create-express-ts-template.git
+   git clone https://github.com/Puskar-Roy/NestJs_API.git
    ```
 2. **Install Dependencies:**
    ```bash
-    cd create-express-ts-template
     npm install
    ```
-3. **Add Environment Variables:**
-   ```bash
-   cd create-express-ts-template
-   touch .env
-   ```
-4. **Add the necessary configuration:**
-   ```bash
-   PORT = 5050 #Your Port 
-   MONGOURI = <your-mongodb>
-   MODE = DEV # DEV = development or PROD = production
-   JWT_SECRET = "jdiafhoaifdhoislknsfnlkfbhojsdfijoeipweopkfek;jsdm;kvm;cvkjvjpisdv" # Your Secret
-   JWT_COOKIE_EXPIRES_IN = 7 #In Days
-   ```
-5. **Run This Project:**
+3. **Run This Project:**
    ```bash
    npm run dev
    ```
@@ -66,22 +49,65 @@ Before you begin contributing to this project, make sure you have the following 
    ```
 
    <p align="right">(<a href="#readme-top">back to top</a>)</p>
-## Contributing 🌟   
-### Making Contributions
+## API End Points  🌟   
+1. **Home Route** 🚀
+```bash
+GET - http://localhost:3000/
+```
+2. **Register User Route** 📥
+```bash
+POST - http://localhost:3000/api/auth/register
+```
+Request Body For Register Route - 
+```bash
+{
+    "name":"etc1",
+    "email": "etc1@gmail.com",
+    "phoneNumber":"+917449585365",
+    "password":"etc@1234",
+    "password":"etc@1234",
+}
+```
+3. **Login User Route** ⚡
+```bash
+POST - http://localhost:3000/api/auth/login
+```
+Request Body For Login Route - 
+```bash
+{
+    "email": "etc1@gmail.com",
+    "password":"etc@1234",
+}
+```
+4. **Get All User Route** ⌨️
+```bash
+GET - http://localhost:3000/api/user/allUsers
+```
+5. **Get a Single User Route** 👦
+```bash
+GET - http://localhost:3000/api/user/:userId
+```
+6. **Update User Route** ⚡
+```bash
+PATCH - http://localhost:3000/api/user/:userId
+```
+Request Body For Update User Route - 
+```bash
+{
+    "name":"etc2",
+    "email": "etc2@gmail.com",
+    "phoneNumber":"+917449585365",
+}
+```
+7. **Delete User Route** 🚀
+```bash
+DELETE - http://localhost:3000/api/user/:userId
+```
 
-We welcome and appreciate contributions from the community ❤️! Here's how you can contribute:
-
-- **Open Issues:** Check for open issues or create a new one to start discussions.
-- **Fork the Repository:** Fork the project to your own GitHub account.
-- **Create Pull Request:** Make changes in your fork and submit a pull request.
-
-### Welcome Contributors!
-
-🚀 Thank you for considering contributing to this project! Your involvement makes this template even better. Feel free to explore the code, share your ideas, and make improvements ✌️.
-
-🌟 Don't hesitate to reach out if you have any questions or need assistance. Together, let's make this project amazing!🟩
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+### Puskar Roy 🖋️
 
 
 
