@@ -2,6 +2,7 @@ import {
   ConflictException,
   Injectable,
   NotFoundException,
+  UnauthorizedException,
 } from '@nestjs/common';
 import { CreateUserDto } from './dto/userCreate.dto';
 import { LoginUserDto } from './dto/userLogin.dto';
@@ -9,12 +10,15 @@ import { Repository } from 'typeorm';
 import { User } from './entity/user.entity';
 import { InjectRepository } from '@nestjs/typeorm';
 import * as bcrypt from 'bcrypt';
+import { JwtService } from '@nestjs/jwt';
+import { Response } from 'express';
 
 @Injectable()
 export class AuthService {
   constructor(
     @InjectRepository(User)
     private userRepo: Repository<User>,
+    private jwtService: JwtService,
   ) {}
   async register(UserDto: CreateUserDto) {
     const user = await this.userRepo.findOne({
@@ -34,7 +38,7 @@ export class AuthService {
     });
     return this.userRepo.save(userToSave);
   }
-  async login(UserDto: LoginUserDto) {
+  async login(UserDto: LoginUserDto, response: Response) {
     const user = await this.userRepo.findOne({
       where: { email: UserDto.email },
     });
@@ -48,9 +52,15 @@ export class AuthService {
     if (isPasswordValid) {
       user.password = undefined;
       user.cpassword = undefined;
-      return { data: user };
+      const payload = { sub: user.id, username: user.name };
+      const token = await this.jwtService.signAsync(payload);
+      response.cookie('jwt_token', token);
+      return {
+        data: user,
+        access_token: token,
+      };
     } else {
-      throw new Error('Invalid Credentials');
+      throw new UnauthorizedException('Invalid Credentials');
     }
   }
   async getAllUsers(): Promise<User[]> {
