@@ -25,7 +25,7 @@ export class UserController {
   deleteUser(@Param('id', ParseIntPipe) userId: number) {
     return this.userService.deleteUser(userId);
   }
-  @Patch(':id')
+  @Patch('/:id')
   updateUser(
     @Param('id', ParseIntPipe) userId: number,
     @Body() userData: UpdateUserDto,
