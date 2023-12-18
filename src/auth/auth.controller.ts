@@ -1,4 +1,11 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Get,
+  Param,
+  ParseIntPipe,
+  Post,
+} from '@nestjs/common';
 import { AuthService } from './auth.service';
 import { CreateUserDto } from './dto/userCreate.dto';
 import { LoginUserDto } from './dto/userLogin.dto';
@@ -18,5 +25,9 @@ export class AuthController {
   @Get('/users')
   allUsers() {
     return this.authService.getAllUsers();
+  }
+  @Get('/user/:id')
+  getUser(@Param('id', ParseIntPipe) userId: number) {
+    return this.authService.getUserById(userId);
   }
 }
