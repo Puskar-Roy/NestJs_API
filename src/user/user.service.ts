@@ -22,4 +22,24 @@ export class UserService {
     }
     return user;
   }
+  async deleteUser(userId: number) {
+    const user = await this.getUserById(userId);
+    if (!user) {
+      throw new NotFoundException(`User with ID ${userId} not found`);
+    }
+    const deleteUserr = await this.userRepo.remove(user);
+    if (deleteUserr) {
+      return { success: true, data: 'user deleted!' };
+    }
+    return { success: true, data: 'user delete fail!' };
+  }
+  async updateUser(
+    userId: number,
+    updateUserDto: Partial<User>,
+  ): Promise<User> {
+    let user = await this.getUserById(userId);
+    user = { ...user, ...updateUserDto };
+    await this.userRepo.save(user);
+    return user;
+  }
 }
