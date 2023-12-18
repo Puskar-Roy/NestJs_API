@@ -1,11 +1,10 @@
-// auth.module.ts
 import { Module, NestModule, MiddlewareConsumer } from '@nestjs/common';
 import { AuthController } from './auth.controller';
 import { AuthService } from './auth.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './entity/user.entity';
 import { JwtModule } from '@nestjs/jwt';
-import { AuthMiddleware } from './auth.middleware'; // Update the path accordingly
+import { AuthMiddleware } from './auth.middleware';
 
 @Module({
   controllers: [AuthController],
