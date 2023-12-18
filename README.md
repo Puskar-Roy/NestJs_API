@@ -107,6 +107,14 @@ DELETE - http://localhost:3000/api/user/:userId
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+
+
+### Future Works 🟩
+1. **Add .env Package**🌟
+2. **Add cors , rate limiter , helmet , xss , hpp etc Packages**🌟
+3. **Deployment**🌟
+
+
 ### Puskar Roy 🖋️
 
 
